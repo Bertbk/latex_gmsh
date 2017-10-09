@@ -1,0 +1,37 @@
+\RequirePackage{listings}
+\RequirePackage{xspace}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\lstdefinelanguage{gmsh}{
+  backgroundcolor=\color{white},  
+  basicstyle=\footnotesize\ttfamily\color{black},   
+  breakatwhitespace=false,
+  breaklines=true,               
+  captionpos=b,                   
+  commentstyle=\color{dkgreen},
+  deletekeywords={...},          
+  escapeinside={\%*}{*)},                  
+  frame=tb, %top/bottom lines
+  language=C++,                
+  keywordstyle=\color{purple},  
+  morekeywords={Point, Line, Surface, Volume, Physical, Circle, Step, Min, Max, Name, Line Loop, DefineConstant, Plane, Loop, newp, newreg, newl, news, newll, newv, Mesh, CharacteristicLengthMax, CharacteristicLengthMin, SetFactory, Spline, BSpline, Rectangle, Disk, Torus, Wedge, Cone, Block, Sphere, Cylinder,
+    BooleanIntersection, BooleanDifference, BooleanFragments, BooleanUnion,
+  Delete, Rotate, Extrude},  
+  identifierstyle=\color{black},
+  stringstyle=\color{blue}, 
+  numbers=left,                 
+  numbersep=5pt,                  
+  numberstyle=\tiny\color{black}, 
+  rulecolor=\color{black},        
+  showspaces=false,               
+  showstringspaces=false,        
+  showtabs=false,                
+  stepnumber=1,                   
+  tabsize=5,                     
+  title=\lstname,                 
+}
+
+\newcommand{\gmsh}{GMSH\xspace{}}
+\lstnewenvironment{gmshl}{\lstset{language=gmsh}}{} %Listing
+\newcommand{\gmshi}[1]{\lstinline[language=gmsh, basicstyle=\ttfamily\color{black}]!#1!} %Inline
+
