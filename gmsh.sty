@@ -31,7 +31,8 @@
   title=\lstname,                 
 }
 
-\newcommand{\gmsh}{GMSH\xspace{}}
+\newcommand{\gmsh}{GMSH\xspace}
 \lstnewenvironment{gmshl}{\lstset{language=gmsh}}{} %Listing
-\newcommand{\gmshi}[1]{\lstinline[language=gmsh, basicstyle=\ttfamily\color{black}]!#1!} %Inline
+\newcommand{\gmshi}[1]{{\lstinline[language=gmsh, basicstyle=\ttfamily\color{black}]!#1!}} %Inline
+\newcommand{\mathgmshi}[1]{\text{\lstinline[language=gmsh, basicstyle=\ttfamily\color{black}]!#1!}} %Inline for math mode
 
